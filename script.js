@@ -1,33 +1,35 @@
 // Add any JavaScript functionality here
 console.log('Welcome to my personal page!');
 
-// Navbar scroll visibility
+// Navbar and hamburger menu functionality
 document.addEventListener('DOMContentLoaded', function() {
-    const navbar = document.querySelector('.navbar');
-    
-    if (!navbar) return; // Exit if navbar doesn't exist
-    
-    // Check if we're on the index page
-    const currentPath = window.location.pathname.toLowerCase();
-    const isIndexPage = currentPath.endsWith('index.html') || 
-                       currentPath.endsWith('/') ||
-                       currentPath === '';
-    
-    if (isIndexPage) {
-        // Handle scroll event for index page
-        window.addEventListener('scroll', function() {
-            const scrollPosition = window.scrollY || window.pageYOffset;
-            
-            if (scrollPosition > 100) {
-                navbar.classList.add('visible');
-            } else {
-                navbar.classList.remove('visible');
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (hamburger && navLinks) {
+        // Toggle menu when hamburger is clicked
+        hamburger.addEventListener('click', function(e) {
+            e.stopPropagation(); // Prevent click from bubbling to document
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
             }
         });
-    } else {
-        // Make navbar immediately visible on all other pages
-        navbar.style.opacity = '1';
-        navbar.style.visibility = 'visible';
+
+        // Close menu when a link is clicked
+        const links = document.querySelectorAll('.nav-links a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
     }
 });
 
