@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Projekte | Mein digitaler Lebenslauf</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="highlight">OLS</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="lebenslauf.html">Lebenslauf</a></li>
+                <li><a href="projekte.html" class="active">Projekte</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+            <div class="login-btn">
+                <a href="#" id="login-link">Login</a>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Meine Projekte</h1>
+                <p>Eine Übersicht über meine bisherigen Arbeiten und Projekte</p>
+            </div>
+        </section>
+
+        <section class="projects-filter">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Alle Projekte</button>
+                    <button class="filter-btn" data-filter="infra">Infrastruktur</button>
+                    <button class="filter-btn" data-filter="cloud">Cloud</button>
+                    <button class="filter-btn" data-filter="security">Sicherheit</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-grid">
+            <div class="container">
+                <div class="projects-container">
+                    <!-- Projekt 1 -->
+                    <div class="project-item" data-category="infra">
+                        <div class="project-card">
+                            <div class="project-image" style="background-color: #002366;">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="project-details">
+                                <h3>Hybrid-Cloud Infrastruktur</h3>
+                                <div class="project-tags">
+                                    <span>VMware</span>
+                                    <span>AWS</span>
+                                    <span>Azure</span>
+                                </div>
+                                <p>Konzeption und Implementierung einer hybriden Cloud-Lösung für ein mittelständisches Unternehmen mit nahtloser Integration von On-Premise und Cloud-Ressourcen. Die Lösung ermöglichte eine flexible Skalierung der IT-Ressourcen bei gleichzeitiger Kostenkontrolle.</p>
+                                <div class="project-features">
+                                    <h4>Hauptmerkmale:</h4>
+                                    <ul>
+                                        <li>Nahtlose Integration von VMware-Umgebung mit AWS und Azure</li>
+                                        <li>Automatisierte Ressourcen-Skalierung basierend auf Auslastung</li>
+                                        <li>Zentrales Monitoring und Management</li>
+                                        <li>Disaster-Recovery-Lösung mit Cloud-Backup</li>
+                                    </ul>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="btn secondary-btn">Fallstudie</a>
+                                    <a href="#" class="btn outline-btn">Dokumentation</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projekt 2 -->
+                    <div class="project-item" data-category="security">
+                        <div class="project-card">
+                            <div class="project-image" style="background-color: #002366;">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="project-details">
+                                <h3>Security Operations Center</h3>
+                                <div class="project-tags">
+                                    <span>SIEM</span>
+                                    <span>Firewall</span>
+                                    <span>IDS/IPS</span>
+                                </div>
+                                <p>Aufbau eines Security Operations Centers (SOC) für die Überwachung und Absicherung der IT-Infrastruktur eines mittelständischen Unternehmens. Implementierung von Echtzeit-Monitoring und Incident-Response-Prozessen.</p>
+                                <div class="project-features">
+                                    <h4>Hauptmerkmale:</h4>
+                                    <ul>
+                                        <li>Integration von SIEM-Lösung für zentrales Log-Management</li>
+                                        <li>Implementierung von IDS/IPS-Systemen an kritischen Netzwerkpunkten</li>
+                                        <li>Automatisierte Alarmierung bei Sicherheitsvorfällen</li>
+                                        <li>Schulung des IT-Teams in Incident-Response-Verfahren</li>
+                                    </ul>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="btn secondary-btn">Fallstudie</a>
+                                    <a href="#" class="btn outline-btn">Dokumentation</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projekt 3 -->
+                    <div class="project-item" data-category="infra">
+                        <div class="project-card">
+                            <div class="project-image" style="background-color: #002366;">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <div class="project-details">
+                                <h3>Netzwerk-Modernisierung</h3>
+                                <div class="project-tags">
+                                    <span>Cisco</span>
+                                    <span>SD-WAN</span>
+                                    <span>VPN</span>
+                                </div>
+                                <p>Komplette Überarbeitung der Netzwerkinfrastruktur eines Unternehmens mit mehreren Standorten. Implementierung von SD-WAN-Technologie für verbesserte Performance und Zuverlässigkeit der Standortvernetzung.</p>
+                                <div class="project-features">
+                                    <h4>Hauptmerkmale:</h4>
+                                    <ul>
+                                        <li>Migration von traditioneller MPLS-Infrastruktur zu SD-WAN</li>
+                                        <li>Implementierung von QoS für kritische Anwendungen</li>
+                                        <li>Zentrales Netzwerkmanagement für alle Standorte</li>
+                                        <li>Erhöhte Bandbreite bei reduzierten Kosten</li>
+                                    </ul>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="btn secondary-btn">Fallstudie</a>
+                                    <a href="#" class="btn outline-btn">Dokumentation</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projekt 4 -->
+                    <div class="project-item" data-category="cloud">
+                        <div class="project-card">
+                            <div class="project-image" style="background-color: #002366;">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <div class="project-details">
+                                <h3>Cloud Migration</h3>
+                                <div class="project-tags">
+                                    <span>AWS</span>
+                                    <span>Terraform</span>
+                                    <span>Docker</span>
+                                </div>
+                                <p>Migration der IT-Infrastruktur eines wachsenden E-Commerce-Unternehmens in die AWS-Cloud. Implementierung von Infrastructure-as-Code für reproduzierbare und skalierbare Umgebungen.</p>
+                                <div class="project-features">
+                                    <h4>Hauptmerkmale:</h4>
+                                    <ul>
+                                        <li>Containerisierung bestehender Anwendungen mit Docker</li>
+                                        <li>Automatisierte Infrastruktur-Bereitstellung mit Terraform</li>
+                                        <li>Implementierung von Auto-Scaling für Lastspitzen</li>
+                                        <li>Kostenoptimierung durch Rightsizing und Reserved Instances</li>
+                                    </ul>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="btn secondary-btn">Fallstudie</a>
+                                    <a href="#" class="btn outline-btn">Dokumentation</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projekt 5 -->
+                    <div class="project-item" data-category="security">
+                        <div class="project-card">
+                            <div class="project-image" style="background-color: #002366;">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="project-details">
+                                <h3>Zero Trust Netzwerk</h3>
+                                <div class="project-tags">
+                                    <span>VPN</span>
+                                    <span>MFA</span>
+                                    <span>IAM</span>
+                                </div>
+                                <p>Implementierung eines Zero-Trust-Netzwerkmodells für ein Unternehmen mit dezentralen Standorten. Die Lösung umfasst Multi-Faktor-Authentifizierung, Identity- und Access-Management sowie sichere VPN-Verbindungen.</p>
+                                <div class="project-features">
+                                    <h4>Hauptmerkmale:</h4>
+                                    <ul>
+                                        <li>Implementierung von MFA für alle Benutzer</li>
+                                        <li>Zentrales IAM für rollenbasierten Zugriff</li>
+                                        <li>Sichere VPN-Verbindungen für Remote-Zugriffe</li>
+                                        <li>Micro-Segmentation für erhöhte Netzwerksicherheit</li>
+                                    </ul>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="btn secondary-btn">Fallstudie</a>
+                                    <a href="#" class="btn outline-btn">Dokumentation</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-cta">
+            <div class="container">
+                <h2>Haben Sie ein Projekt im Sinn?</h2>
+                <p>Ich bin immer auf der Suche nach neuen, spannenden Herausforderungen. Lassen Sie uns gemeinsam Ihre Vision umsetzen!</p>
+                <a href="kontakt.html" class="btn primary-btn">Kontaktieren Sie mich</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="highlight">OLS</span>
+                <p>Digitaler Lebenslauf & Portfolio</p>
+            </div>
+            <div class="footer-links">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="index.html">Startseite</a></li>
+                    <li><a href="lebenslauf.html">Lebenslauf</a></li>
+                    <li><a href="projekte.html">Projekte</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Social Media</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <h3>Kontakt</h3>
+                <p><i class="fas fa-envelope"></i> info@meine-domain.de</p>
+                <p><i class="fas fa-phone"></i> +49 123 456789</p>
+                <p><i class="fas fa-map-marker-alt"></i> Berlin, Deutschland</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Mein digitaler Lebenslauf. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Benutzername</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Passwort</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn primary-btn">Einloggen</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/projects.js"></script>
+</body>
+</html>

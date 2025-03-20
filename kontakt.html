@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Kontakt | Mein digitaler Lebenslauf</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="highlight">OLS</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="lebenslauf.html">Lebenslauf</a></li>
+                <li><a href="projekte.html">Projekte</a></li>
+                <li><a href="kontakt.html" class="active">Kontakt</a></li>
+            </ul>
+            <div class="login-btn">
+                <a href="#" id="login-link">Login</a>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Kontakt</h1>
+                <p>Haben Sie eine Frage oder ein Projekt? Kontaktieren Sie mich!</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h2>Kontaktinformationen</h2>
+                        <p>Ich freue mich über Ihre Nachricht und antworte in der Regel innerhalb von 24 Stunden.</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h3>E-Mail</h3>
+                                    <p>info@meine-domain.de</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h3>Telefon</h3>
+                                    <p>+49 123 456789</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h3>Standort</h3>
+                                    <p>Berlin, Deutschland</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <h3>Social Media</h3>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon" title="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="social-icon" title="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="social-icon" title="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="social-icon" title="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="availability">
+                            <h3>Verfügbarkeit</h3>
+                            <p>Derzeit offen für:</p>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Freelance-Projekte</li>
+                                <li><i class="fas fa-check"></i> Vollzeitpositionen</li>
+                                <li><i class="fas fa-check"></i> Beratung & Consulting</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-container">
+                        <h2>Nachricht senden</h2>
+                        <form id="contact-form" action="backend/contact_form.php" method="POST">
+                            <div class="form-group">
+                                <label for="firstname">Vorname *</label>
+                                <input type="text" id="firstname" name="firstname" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="lastname">Nachname *</label>
+                                <input type="text" id="lastname" name="lastname" required>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label for="email">E-Mail *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label for="message">Nachricht *</label>
+                                <textarea id="message" name="message" rows="6" required></textarea>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="privacy" name="privacy" required>
+                                    <label for="privacy">Ich stimme der Verarbeitung meiner Daten gemäß der Datenschutzerklärung zu.</label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-submit">
+                                <button type="submit" class="btn primary-btn">Nachricht senden</button>
+                            </div>
+                        </form>
+                        <div id="form-message" class="form-message"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2>Häufig gestellte Fragen</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Welche Arten von Projekten übernehmen Sie?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Ich spezialisiere mich auf die Integration von IT-Systemen, Netzwerkinfrastrukturen und Cloud-Lösungen. Von der Modernisierung bestehender Infrastrukturen bis hin zum Aufbau komplexer Systemumgebungen - ich bin für diverse Projekte offen.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Wie sieht Ihr typischer Arbeitsprozess aus?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Mein Prozess beginnt mit einer gründlichen Analyse der bestehenden IT-Infrastruktur und der Anforderungen. Danach erstelle ich ein Konzept und nach Ihrer Zustimmung beginnt die Implementierungsphase. Regelmäßige Updates und Feedback-Runden sind ein wesentlicher Bestandteil meines Arbeitsprozesses, gefolgt von umfassenden Tests und Dokumentation.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Wie berechnen Sie Ihre Dienstleistungen?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Je nach Projekt biete ich sowohl Festpreise als auch stundenbasierte Abrechnungen an. Nach unserem ersten Gespräch kann ich Ihnen ein detailliertes Angebot unterbreiten, das auf Ihren spezifischen Anforderungen basiert.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Arbeiten Sie remote oder vor Ort?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Ich arbeite hauptsächlich remote, bin aber für wichtige Meetings und Workshops auch bereit, vor Ort zu sein, besonders im Raum Berlin und Umgebung.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Bieten Sie auch Support nach Projektabschluss an?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Ja, ich biete verschiedene Support-Modelle an, von reaktivem Incident-Management bis hin zu proaktivem Monitoring und Wartung. Die genauen Konditionen können wir individuell besprechen und an Ihre Bedürfnisse anpassen.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="highlight">OLS</span>
+                <p>Digitaler Lebenslauf & Portfolio</p>
+            </div>
+            <div class="footer-links">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="index.html">Startseite</a></li>
+                    <li><a href="lebenslauf.html">Lebenslauf</a></li>
+                    <li><a href="projekte.html">Projekte</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Social Media</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <h3>Kontakt</h3>
+                <p><i class="fas fa-envelope"></i> info@meine-domain.de</p>
+                <p><i class="fas fa-phone"></i> +49 123 456789</p>
+                <p><i class="fas fa-map-marker-alt"></i> Berlin, Deutschland</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Mein digitaler Lebenslauf. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Benutzername</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Passwort</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn primary-btn">Einloggen</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

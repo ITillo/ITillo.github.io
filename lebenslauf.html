@@ -2,94 +2,363 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lebenslauf - Your Name</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Lebenslauf | Mein digitaler Lebenslauf</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
 </head>
-<body class="cv-page">
-    <nav class="navbar">
-        <div class="nav-content">
-            <a href="index.html" class="logo">Your Name</a>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="./lebenslauf.html">Lebenslauf</a></li>
-                <li><a href="./habeck.html">Renditerechner</a></li>
-                <li><a href="./contact.html">Kontakt</a></li>
-            </ul>
+<body>
+    <header>
+        <div class="logo">
+            <span class="highlight">OLS</span>
         </div>
-    </nav>
+        <nav>
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="lebenslauf.html" class="active">Lebenslauf</a></li>
+                <li><a href="projekte.html">Projekte</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+            <div class="login-btn">
+                <a href="#" id="login-link">Login</a>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
 
-    <div class="cv-container">
-        <h1>Mein Werdegang</h1>
-        
-        <div class="timeline-wrapper">
-            <div class="timeline">
-                <!-- Newest Entry -->
-                <div class="timeline-item right">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="date">2024 - Present</div>
-                        <h3>Senior Developer</h3>
-                        <p class="company">Tech Company</p>
-                        <ul class="achievements">
-                            <li>Led development of key projects</li>
-                            <li>Managed team of 5 developers</li>
-                            <li>Implemented new technology stack</li>
-                        </ul>
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Mein Lebenslauf</h1>
+                <p>Meine berufliche Reise im Überblick</p>
+            </div>
+        </section>
+
+        <section class="timeline-section">
+            <div class="container">
+                <div class="timeline-container">
+                    <svg class="timeline-path" viewBox="0 0 100 2000" preserveAspectRatio="none">
+                        <path id="timelinePath" d="M50,0 C60,250 40,500 55,750 C70,1000 30,1250 50,1500 C70,1750 45,2000 50,2000" stroke="#0a2463" stroke-width="5" fill="none"/>
+                    </svg>
+                    
+                    <div class="timeline-item right" id="item1">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2023 - Heute</div>
+                            <h3>Senior Systemintegrator</h3>
+                            <h4>Tech Solutions GmbH, Berlin</h4>
+                            <p>Leitung eines Teams von IT-Spezialisten bei der Integration komplexer IT-Infrastrukturen. Implementierung von standardisierten Prozessen und Verbesserung der Systemstabilität durch kontinuierliches Monitoring.</p>
+                            <ul>
+                                <li>Erfolgreiche Umsetzung von 5 Großprojekten für internationale Kunden</li>
+                                <li>Reduzierung der Ausfallzeiten um 40% durch Optimierung der Systemarchitektur</li>
+                                <li>Integration von automatisierten Monitoring- und Alerting-Systemen</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-
-                <div class="timeline-item left">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="date">2022 - 2024</div>
-                        <h3>Full Stack Developer</h3>
-                        <p class="company">Digital Agency</p>
-                        <ul class="achievements">
-                            <li>Developed enterprise web applications</li>
-                            <li>Optimized application performance</li>
-                            <li>Mentored junior developers</li>
-                        </ul>
+                    
+                    <div class="timeline-item left" id="item2">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2021 - 2023</div>
+                            <h3>IT-Infrastruktur Spezialist</h3>
+                            <h4>Digital Systems, München</h4>
+                            <p>Planung und Implementierung von skalierbaren IT-Infrastrukturen. Zusammenarbeit mit Netzwerkspezialisten und Sicherheitsexperten zur Erstellung robuster und sicherer Systemumgebungen.</p>
+                            <ul>
+                                <li>Aufbau von hybriden Cloud-Umgebungen für mehr als 15 Kunden</li>
+                                <li>Implementierung von Virtualisierungslösungen (VMware, Hyper-V)</li>
+                                <li>Optimierung der Ressourcennutzung durch effiziente Systemarchitekturen</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-
-                <div class="timeline-item right">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="date">2020 - 2022</div>
-                        <h3>Junior Developer</h3>
-                        <p class="company">Startup</p>
-                        <ul class="achievements">
-                            <li>Built responsive web interfaces</li>
-                            <li>Collaborated with design team</li>
-                            <li>Improved code quality standards</li>
-                        </ul>
+                    
+                    <div class="timeline-item right" id="item3">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2019 - 2021</div>
+                            <h3>Netzwerktechniker</h3>
+                            <h4>NetVision, Hamburg</h4>
+                            <p>Aufbau und Wartung von Unternehmens-Netzwerken. Fokus auf Netzwerksicherheit und Performance-Optimierung.</p>
+                            <ul>
+                                <li>Konfiguration und Verwaltung von mehr als 30 Netzwerkinfrastrukturen</li>
+                                <li>Implementation von VPN- und Firewall-Lösungen</li>
+                                <li>Zusammenarbeit mit IT-Teams zur Optimierung der Netzwerkarchitektur</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-
-                <!-- Oldest Entry -->
-                <div class="timeline-item left">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="date">2018 - 2020</div>
-                        <h3>Intern Developer</h3>
-                        <p class="company">Tech Institute</p>
-                        <ul class="achievements">
-                            <li>Learned fundamental development practices</li>
-                            <li>Assisted in multiple projects</li>
-                            <li>Developed basic web applications</li>
-                        </ul>
+                    
+                    <div class="timeline-item left" id="item4">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2017 - 2019</div>
+                            <h3>Junior Systemadministrator</h3>
+                            <h4>TechCraft GmbH, Frankfurt</h4>
+                            <p>Unterstützung bei der Administration von Server- und Netzwerkinfrastrukturen. Erlernen von Best Practices und Arbeiten im Team.</p>
+                            <ul>
+                                <li>Mitarbeit an 15 Kundenprojekten</li>
+                                <li>Implementierung von Backup- und Recovery-Lösungen</li>
+                                <li>Erstellung von Dokumentationen und Benutzerhandbüchern</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item right" id="item5">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2013 - 2017</div>
+                            <h3>Informatik (B.Sc.)</h3>
+                            <h4>Technische Universität Berlin</h4>
+                            <p>Studium der Informatik mit Schwerpunkt auf Systemintegration und Netzwerktechnik.</p>
+                            <ul>
+                                <li>Abschlussarbeit: "Optimierung von Netzwerkinfrastrukturen für mittelständische Unternehmen"</li>
+                                <li>Teilnahme an mehreren IT-Sicherheits-Wettbewerben</li>
+                                <li>Praktika bei IT-Dienstleistern</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="timeline-beam"></div>
+        </section>
+
+        <section class="skills-section">
+            <div class="container">
+                <h2>Fähigkeiten & Kompetenzen</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Programmiersprachen</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <span>PowerShell</span>
+                                <div class="skill-level">
+                                    <div class="level" data-level="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Bash</span>
+                                <div class="skill-level">
+                                    <div class="level" data-level="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Python</span>
+                                <div class="skill-level">
+                                    <div class="level" data-level="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>SQL</span>
+                                <div class="skill-level">
+                                    <div class="level" data-level="80"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Technologien & Plattformen</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <span>Windows Server</span>
+                                <div class="skill-level">
+                                    <div class="level" data-level="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Linux</span>
+                                <div class="skill-level">
+                                    <div class="level" data-level="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>VMware</span>
+                                <div class="skill-level">
+                                    <div class="level" data-level="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Azure/AWS</span>
+                                <div class="skill-level">
+                                    <div class="level" data-level="80"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Tools & Software</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <span>Git</span>
+                                <div class="skill-level">
+                                    <div class="level" data-level="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Ansible</span>
+                                <div class="skill-level">
+                                    <div class="level" data-level="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Docker</span>
+                                <div class="skill-level">
+                                    <div class="level" data-level="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Kubernetes</span>
+                                <div class="skill-level">
+                                    <div class="level" data-level="75"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Softskills</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <span>Projektmanagement</span>
+                                <div class="skill-level">
+                                    <div class="level" data-level="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Teamarbeit</span>
+                                <div class="skill-level">
+                                    <div class="level" data-level="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Kommunikation</span>
+                                <div class="skill-level">
+                                    <div class="level" data-level="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Problemlösung</span>
+                                <div class="skill-level">
+                                    <div class="level" data-level="95"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="certificates-section">
+            <div class="container">
+                <h2>Zertifikate & Weiterbildungen</h2>
+                <div class="certificates-grid">
+                    <div class="certificate-card">
+                        <div class="certificate-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="certificate-content">
+                            <h3>ITIL Foundation</h3>
+                            <p>ITIL, 2022</p>
+                        </div>
+                    </div>
+                    <div class="certificate-card">
+                        <div class="certificate-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="certificate-content">
+                            <h3>CompTIA Security+</h3>
+                            <p>CompTIA, 2021</p>
+                        </div>
+                    </div>
+                    <div class="certificate-card">
+                        <div class="certificate-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="certificate-content">
+                            <h3>VMware VCP</h3>
+                            <p>VMware, 2020</p>
+                        </div>
+                    </div>
+                    <div class="certificate-card">
+                        <div class="certificate-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="certificate-content">
+                            <h3>Cisco CCNA</h3>
+                            <p>Cisco, 2019</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="download-section">
+            <div class="container">
+                <h2>PDF-Version herunterladen</h2>
+                <p>Sie können meinen Lebenslauf auch als PDF-Dokument herunterladen.</p>
+                <a href="#" class="btn primary-btn"><i class="fas fa-download"></i> Lebenslauf als PDF</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="highlight">OLS</span>
+                <p>Digitaler Lebenslauf & Portfolio</p>
+            </div>
+            <div class="footer-links">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="index.html">Startseite</a></li>
+                    <li><a href="lebenslauf.html">Lebenslauf</a></li>
+                    <li><a href="projekte.html">Projekte</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Social Media</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <h3>Kontakt</h3>
+                <p><i class="fas fa-envelope"></i> info@meine-domain.de</p>
+                <p><i class="fas fa-phone"></i> +49 123 456789</p>
+                <p><i class="fas fa-map-marker-alt"></i> Berlin, Deutschland</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Mein digitaler Lebenslauf. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Benutzername</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Passwort</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn primary-btn">Einloggen</button>
+            </form>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/timeline.js"></script>
 </body>
 </html>

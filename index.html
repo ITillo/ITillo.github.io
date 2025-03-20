@@ -1,81 +1,260 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Digital CV</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Mein digitaler Lebenslauf</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-content">
-            <a href="index.html" class="logo">Your Name</a>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="./lebenslauf.html">Lebenslauf</a></li>
-                <li><a href="./habeck.html">Renditerechner</a></li>
-                <li><a href="./contact.html">Kontakt</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Willkommen in meiner Welt</h1>
-            <p>ITler • Self Improvment • Sozial</p>
-        </div>
-        <div class="scroll-down">
-            <span class="mouse">
-                <span class="mouse-wheel"></span>
-            </span>
-            <span class="arrow"></span>
-        </div>
-    </section>
-
     <header>
-        <h1>Your Name</h1>
-        <p>Welcome to my personal page! Here you can find my digital CV and join our community.</p>
+        <div class="logo">
+            <span class="highlight">OLS</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Startseite</a></li>
+                <li><a href="lebenslauf.html">Lebenslauf</a></li>
+                <li><a href="projekte.html">Projekte</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+            <div class="login-btn">
+                <a href="#" id="login-link">Login</a>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
     </header>
-    <section id="about" class="card-container">
-        <div class="card">
-            <h2>Über mich</h2>
-            <p>Alter: 21</p>
-        </div>
-    </section>
-    <section id="skills" class="card-container">
-        <div class="card">
-            <h2>Skills</h2>
-            <ul>
-                <li>IT</li>
-                <li>Self Improvment</li>
-                <li>Handwerk</li>
-            </ul>
-        </div>
-    </section>
-    <section id="projects" class="card-container">
-        <div class="card">
-            <h2>Projekte:</h2>
-            <ul>
-                <li>Integration einer pfsense</li>
-                <li>Ausbeu meines Heimnetz</li>
-                <li>Diese Seite hier</li>
-            </ul>
-        </div>
-    </section>
-    <section id="community" class="card-container">
-        <div class="card">
-            <h2>Habecks Kapital Versicherungs Tester</h2>
-            <a href="./habeck.html">Hier</a>
-        </div>
-    </section>
-    <footer>
-        <p>Contact: <a href="mailto:oli_s19@yahoo.de">oli_s19@yahoo.de</a></p>
-    </footer>
-    <script src="script.js"></script>
 
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="animate-title">Willkommen auf meiner Website</h1>
+                <div class="title-underline"></div>
+                <p class="animate-subtitle">IT und Self-Development</p>
+                <div class="cta-buttons">
+                    <a href="lebenslauf.html" class="btn primary-btn">Meinen Lebenslauf ansehen</a>
+                    <a href="kontakt.html" class="btn secondary-btn">Kontakt aufnehmen</a>
+                </div>
+            </div>
+            <div class="hero-scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div>
+                    <span>Scrollen</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="container">
+                <h2>Über mich</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Herzlich willkommen auf meiner digitalen Visitenkarte! Ich bin ein leidenschaftlicher Systemintegrator mit Expertise in modernen IT-Infrastrukturen und einem Auge für effiziente Systemarchitekturen. Mit jahrelanger Erfahrung in der Branche kombiniere ich technisches Know-how mit pragmatischen Lösungen, um zuverlässige und skalierbare IT-Umgebungen zu schaffen.</p>
+                        <p>Meine Vision ist es, die Lücke zwischen komplexen Technologien und benutzerfreundlichen Systemen zu schließen. Ich glaube an klare Kommunikation, kontinuierliches Lernen und die Kraft der Zusammenarbeit.</p>
+                        <div class="skills-container">
+                            <h3>Meine Fähigkeiten</h3>
+                            <div class="skill-bars">
+                                <div class="skill-bar">
+                                    <div class="skill-name">Netzwerktechnik</div>
+                                    <div class="skill-progress">
+                                        <div class="progress-bar" data-progress="95"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-name">Server-Administration</div>
+                                    <div class="skill-progress">
+                                        <div class="progress-bar" data-progress="90"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-name">Virtualisierung</div>
+                                    <div class="skill-progress">
+                                        <div class="progress-bar" data-progress="85"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-name">Cloud-Infrastruktur</div>
+                                    <div class="skill-progress">
+                                        <div class="progress-bar" data-progress="80"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-name">IT-Sicherheit</div>
+                                    <div class="skill-progress">
+                                        <div class="progress-bar" data-progress="88"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-highlights">
+                        <div class="highlight-card">
+                            <i class="fas fa-network-wired"></i>
+                            <h3>Systemintegration</h3>
+                            <p>Integration von Hardware, Software und Netzwerkkomponenten zu funktionalen IT-Systemen.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>IT-Sicherheit</h3>
+                            <p>Implementierung von Sicherheitskonzepten und Schutz kritischer Infrastrukturen.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fas fa-cloud"></i>
+                            <h3>Cloud-Infrastruktur</h3>
+                            <p>Planung und Umsetzung skalierbarer Cloud-Lösungen für Unternehmen.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="career-preview">
+            <div class="container">
+                <h2>Karriere-Höhepunkte</h2>
+                <div class="timeline-preview">
+                    <!-- Vereinfachte Darstellung der Timeline -->
+                    <div class="timeline-line"></div>
+                    <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <h3>Aktuell</h3>
+                            <p>Senior Systemintegrator bei Tech Solutions GmbH</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-content">
+                            <h3>2021 - 2023</h3>
+                            <p>IT-Infrastruktur Spezialist bei Digital Systems</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <h3>2019 - 2021</h3>
+                            <p>Netzwerktechniker bei NetVision</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cta-center">
+                    <a href="lebenslauf.html" class="btn primary-btn">Vollständigen Lebenslauf ansehen</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-preview">
+            <div class="container">
+                <h2>Ausgewählte Projekte</h2>
+                <div class="project-cards">
+                    <div class="project-card">
+                        <div class="project-image" style="background-color: #002366;">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>Hybrid-Cloud Infrastruktur</h3>
+                            <p>Konzeption und Implementierung einer hybriden Cloud-Lösung mit nahtloser Integration von On-Premise und Cloud-Ressourcen.</p>
+                            <div class="project-tags">
+                                <span>VMware</span>
+                                <span>AWS</span>
+                                <span>Azure</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image" style="background-color: #002366;">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>Security Operations Center</h3>
+                            <p>Aufbau eines SOC für die Überwachung und Absicherung der IT-Infrastruktur eines mittelständischen Unternehmens.</p>
+                            <div class="project-tags">
+                                <span>SIEM</span>
+                                <span>Firewall</span>
+                                <span>IDS/IPS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image" style="background-color: #002366;">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>Netzwerk-Modernisierung</h3>
+                            <p>Komplette Überarbeitung der Netzwerkinfrastruktur eines Unternehmens mit mehreren Standorten.</p>
+                            <div class="project-tags">
+                                <span>Cisco</span>
+                                <span>SD-WAN</span>
+                                <span>VPN</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cta-center">
+                    <a href="projekte.html" class="btn primary-btn">Alle Projekte ansehen</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="highlight">OLS</span>
+                <p>Digitaler Lebenslauf & Portfolio</p>
+            </div>
+            <div class="footer-links">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="index.html">Startseite</a></li>
+                    <li><a href="lebenslauf.html">Lebenslauf</a></li>
+                    <li><a href="projekte.html">Projekte</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Social Media</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <h3>Kontakt</h3>
+                <p><i class="fas fa-envelope"></i> info@meine-domain.de</p>
+                <p><i class="fas fa-phone"></i> +49 123 456789</p>
+                <p><i class="fas fa-map-marker-alt"></i> Berlin, Deutschland</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Mein digitaler Lebenslauf. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Benutzername</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Passwort</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn primary-btn">Einloggen</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
